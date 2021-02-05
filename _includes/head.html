@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" type="image/icon" href="{{ site.favicon }}">
+{{ if page.title }}
+<title>{{ page.title }}</title>
+{{ end if }}
+<link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+<link rel="stylesheet" href="{{ site.url }}/css/main.css">
+<link rel="stylesheet" href="{{ site.url }}/css/other.css">
+{% if site.mathjax %}
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      //jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+      //,
+      //displayAlign: "left",
+      //displayIndent: "2em"
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
+  {% endif %}
+
+</head>
+<body>
+
